@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import Home from "../screens/Home";
 import History from "../screens/History";
 import { colors } from "../constants/colors";
+import Settings from "../screens/Settings";
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +22,9 @@ const TabNavigator = () => {
           } else if (route.name === "History") {
             iconName = focused ? "archive" : "archive-outline";
             primarygrey = focused ? colors.primary : "grey";
+          } else if (route.name === "Settings") {
+            iconName = focused ? "settings" : "settings-outline";
+            primarygrey = focused ? colors.primary : "grey";
           }
           return (
             <Ionicons name={iconName} size={24} style={{color: primarygrey}} />
@@ -32,6 +36,7 @@ const TabNavigator = () => {
     >
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="History" component={History} />
+      <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
   );
 };
