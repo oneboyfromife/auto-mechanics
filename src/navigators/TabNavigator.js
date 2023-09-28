@@ -5,6 +5,7 @@ import Home from "../screens/Home";
 import History from "../screens/History";
 import { colors } from "../constants/colors";
 import Settings from "../screens/Settings";
+import SettingsStack from "./SettingsStack";
 
 const Tab = createBottomTabNavigator();
 
@@ -36,7 +37,7 @@ const TabNavigator = () => {
     >
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="History" component={History} />
-      <Tab.Screen name="Settings" component={Settings} />
+      <Tab.Screen name="Settings" component={SettingsStack} />
     </Tab.Navigator>
   );
 };
